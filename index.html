@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RuleAtlas — Short‑term rental rules, verified & cited</title>
+  <meta name="description" content="RuleAtlas: short‑term rental regulation intelligence. Jurisdiction-by-jurisdiction rules with citations, last-verified timestamps, and change monitoring." />
+  <style>
+    :root { --bg:#0b0f17; --fg:#e9eefb; --muted:#aab6d6; --card:#121a2a; --accent:#7aa2ff; --accent2:#72f0c0; }
+    *{box-sizing:border-box} body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial; background:radial-gradient(1200px 700px at 20% -10%, rgba(122,162,255,.25), transparent 60%), radial-gradient(900px 500px at 85% 10%, rgba(114,240,192,.18), transparent 55%), var(--bg); color:var(--fg);} 
+    a{color:inherit} 
+    .wrap{max-width:980px;margin:0 auto;padding:48px 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:46px}
+    .logo{font-weight:700;letter-spacing:.2px}
+    .pill{font-size:12px;color:var(--muted);border:1px solid rgba(233,238,251,.14);padding:8px 10px;border-radius:999px}
+    h1{font-size:44px;line-height:1.05;margin:0 0 14px}
+    p{color:var(--muted);font-size:18px;line-height:1.55;margin:0 0 18px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:start}
+    .card{background:rgba(18,26,42,.8);border:1px solid rgba(233,238,251,.12);border-radius:16px;padding:18px;backdrop-filter: blur(6px)}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    input{flex:1;min-width:240px;background:#0a0e16;border:1px solid rgba(233,238,251,.18);color:var(--fg);padding:12px 12px;border-radius:12px;outline:none}
+    button{background:linear-gradient(135deg, var(--accent), var(--accent2));border:none;color:#041018;padding:12px 14px;border-radius:12px;font-weight:700;cursor:pointer}
+    .mini{font-size:13px;color:var(--muted);margin-top:10px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+    .k{font-weight:700;margin-bottom:6px}
+    .f{font-size:14px;color:var(--muted);line-height:1.45}
+    .foot{margin-top:44px;color:var(--muted);font-size:13px;line-height:1.5}
+    @media (max-width:860px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="logo">RuleAtlas</div>
+      <div class="pill">v0 • early access</div>
+    </div>
+
+    <div class="hero">
+      <div>
+        <h1>Short‑term rental rules, <span style="color:var(--accent2)">verified</span> &amp; <span style="color:var(--accent)">cited</span>.</h1>
+        <p>
+          RuleAtlas tracks STR regulations jurisdiction‑by‑jurisdiction with citations, last‑verified timestamps, and change monitoring.
+          Use it to shortlist markets faster and avoid compliance surprises.
+        </p>
+        <div class="card">
+          <div class="k">Get early access</div>
+          <p class="f">Drop your email. We’ll invite the first cohort as soon as the initial coverage map is live.</p>
+          <form class="cta" method="post" action="#" onsubmit="event.preventDefault(); alert('Thanks — early access is not wired yet. Reply here and I\'ll hook it up next.');">
+            <input type="email" placeholder="you@company.com" required />
+            <button type="submit">Join waitlist</button>
+          </form>
+          <div class="mini">No spam. One email when we launch + major updates.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="k">What you’ll get</div>
+        <div class="grid">
+          <div>
+            <div class="k">Filters & map</div>
+            <div class="f">Permit required, waitlist status, fees, residency rules, caps, zoning constraints.</div>
+          </div>
+          <div>
+            <div class="k">Citations</div>
+            <div class="f">Every field links back to the ordinance/PDF source (with page refs when possible).</div>
+          </div>
+          <div>
+            <div class="k">Freshness</div>
+            <div class="f">Last‑verified timestamps + change alerts when jurisdictions update rules.</div>
+          </div>
+        </div>
+        <div class="foot">
+          <strong>Disclaimer:</strong> RuleAtlas provides research links and summaries, not legal advice.
+          Always confirm with the jurisdiction and/or counsel before purchasing or operating an STR.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

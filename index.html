@@ -59,7 +59,7 @@
                 msg.textContent = 'Submitting…';
                 const email = form.email.value;
                 try {
-                  const r = await fetch('https://api.tryruleatlas.com/waitlist', {
+                  const r = await fetch('https://ruleatlas-api.royal-unit-254c.workers.dev/waitlist', {
                     method: 'POST',
                     headers: { 'content-type': 'application/json' },
                     body: JSON.stringify({ email, source: 'landing' })

@@ -45,11 +45,38 @@
         <div class="card">
           <div class="k">Get early access</div>
           <p class="f">Drop your email. We’ll invite the first cohort as soon as the initial coverage map is live.</p>
-          <form class="cta" method="post" action="#" onsubmit="event.preventDefault(); alert('Thanks — early access is not wired yet. Reply here and I\'ll hook it up next.');">
-            <input type="email" placeholder="you@company.com" required />
+          <form class="cta" id="waitlist">
+            <input type="email" name="email" placeholder="you@company.com" required />
             <button type="submit">Join waitlist</button>
           </form>
-          <div class="mini">No spam. One email when we launch + major updates.</div>
+          <div class="mini" id="waitlist_msg">No spam. One email when we launch + major updates.</div>
+          <script>
+            (function(){
+              const form = document.getElementById('waitlist');
+              const msg = document.getElementById('waitlist_msg');
+              form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                msg.textContent = 'Submitting…';
+                const email = form.email.value;
+                try {
+                  const r = await fetch('https://api.tryruleatlas.com/waitlist', {
+                    method: 'POST',
+                    headers: { 'content-type': 'application/json' },
+                    body: JSON.stringify({ email, source: 'landing' })
+                  });
+                  const j = await r.json().catch(() => ({}));
+                  if (r.ok && j.ok) {
+                    msg.textContent = 'You’re on the list. Thanks.';
+                    form.reset();
+                  } else {
+                    msg.textContent = 'Could not submit (invalid email or temporary issue).';
+                  }
+                } catch (err) {
+                  msg.textContent = 'Network error. Try again in a moment.';
+                }
+              });
+            })();
+          </script>
         </div>
       </div>
 
